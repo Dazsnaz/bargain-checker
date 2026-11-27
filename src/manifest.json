@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Bargain checker",
+  "version": "0.1.0",
+  "description": "Shows whether a UK sale price is a genuine deal or an inflated \"was\" price, using the product's price history.",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_popup": "ui/popup.html", "default_title": "Bargain checker" },
+  "options_page": "ui/options.html",
+  "background": { "service_worker": "background.js" },
+  "permissions": ["storage", "alarms"],
+  "host_permissions": [
+    "https://*.amazon.co.uk/*",
+    "https://*.argos.co.uk/*",
+    "https://*.currys.co.uk/*",
+    "https://*.johnlewis.com/*",
+    "https://ao.com/*",
+    "https://*.ao.com/*",
+    "https://*.very.co.uk/*",
+    "https://*.diy.com/*",
+    "https://api.keepa.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.co.uk/*",
+        "https://*.argos.co.uk/*",
+        "https://*.currys.co.uk/*",
+        "https://*.johnlewis.com/*",
+        "https://ao.com/*",
+        "https://*.ao.com/*",
+        "https://*.very.co.uk/*",
+        "https://*.diy.com/*"
+      ],
+      "js": ["lib/price.js", "lib/sites.js", "lib/extract.js", "lib/verdict.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
