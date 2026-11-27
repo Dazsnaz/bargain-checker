@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Bargain checker settings</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+  <h1>Bargain checker settings</h1>
+
+  <section>
+    <h2>Amazon price history (Keepa)</h2>
+    <p>With a <a href="https://keepa.com/#!api" target="_blank" rel="noopener">Keepa API key</a> the extension shows years of Amazon UK price history straight away. Keepa API access is a paid plan. Without a key, Amazon products build their own history like the other shops.</p>
+    <label for="keepa">Keepa API key</label>
+    <input id="keepa" type="password" autocomplete="off" spellcheck="false">
+    <button id="save">Save</button>
+    <span id="saved" class="muted"></span>
+    <p class="muted">The key stays in this browser and is only sent to api.keepa.com.</p>
+  </section>
+
+  <section>
+    <h2>Your price history</h2>
+    <p>All recorded prices are stored in this browser only.</p>
+    <button id="export">Download as JSON</button>
+    <button id="clear" class="danger">Delete all history</button>
+  </section>
+
+  <section>
+    <h2>Supported shops</h2>
+    <p>Amazon UK, Argos, Currys, John Lewis, AO, Very and B&amp;Q.</p>
+  </section>
+
+  <script src="options.js"></script>
+</body>
+</html>

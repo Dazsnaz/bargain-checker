@@ -1,0 +1,13 @@
+{
+  "name": "bargain-checker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension that shows whether a UK sale price is a genuine deal, using price history.",
+  "scripts": {
+    "test": "node --test test/unit/*.test.js",
+    "test:e2e": "node --test test/e2e/*.test.js",
+    "icons": "python3 scripts/make_icons.py",
+    "zip": "cd src && zip -r ../bargain-checker.zip . -x '*.DS_Store'"
+  },
+  "license": "UNLICENSED"
+}

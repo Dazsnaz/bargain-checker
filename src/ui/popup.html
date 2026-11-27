@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Bargain checker</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <header>
+    <h1>Bargain checker</h1>
+    <a href="options.html" target="_blank">Settings</a>
+  </header>
+  <section>
+    <h2>Watching</h2>
+    <ul id="watched" class="list"></ul>
+    <button id="check-now">Check watched prices now</button>
+    <p id="last-check" class="muted"></p>
+  </section>
+  <section>
+    <h2>Recently seen</h2>
+    <ul id="recent" class="list"></ul>
+  </section>
+  <script src="../lib/price.js"></script>
+  <script src="../lib/verdict.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
